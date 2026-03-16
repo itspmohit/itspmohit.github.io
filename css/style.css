@@ -301,13 +301,18 @@ ul.work-info-list {
   align-items: center;
   justify-content: center;
 }
+#print-btn:hover {
+  color: var(--link-hover);
+}
 #print-btn {
   color: var(--link);
   background: none;
   border: none;
   margin: 0;
   padding: 0;
-} /* hover for desktop only */
+  cursor: pointer;
+}
+/* hover for desktop only */
 @media (hover: hover) {
   .scroll-btns a:hover {
     transform: scale(1.1);
