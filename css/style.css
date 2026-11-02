@@ -434,11 +434,23 @@ details summary {
 
 @media print {
   @page {
-    margin: 1.5cm 2cm;
+    margin: 0.5cm;
     size: A4;
   }
 
-  #print-btn,
+  html,
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0 5px;
+  }
+
+  #name {
+    font-size: 24px;
+  }
+
+  nav,
+  #profile-picture,
   #copyright-text,
   .scroll-btns,
   #education-and-experience ~ hr,
@@ -446,10 +458,21 @@ details summary {
   #projects ~ hr,
   #blogs,
   #my-setup {
-    display: none;
+    display: none !important;
   }
 
   a:visited {
-    color: var(--link);
+    color: var(--link) !important;
+  }
+
+  .print-only-links {
+    display: inline-block !important;
+  }
+}
+
+/* Hide print-only elements on screen */
+@media screen {
+  .print-only-links {
+    display: none;
   }
 }
