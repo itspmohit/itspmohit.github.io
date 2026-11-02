@@ -1,22 +1,36 @@
-/* CSS style reset */ /* 1. Use a more-intuitive box-sizing model */
+/* CSS style reset */
+
+/* 1. Use a more-intuitive box-sizing model */
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-} /* 2. Remove default margin */
+}
+
+/* 2. Remove default margin */
+
 *:not(dialog) {
   margin: 0;
-} /* 3. Enable keyword animations */
+}
+
+/* 3. Enable keyword animations */
+
 @media (prefers-reduced-motion: no-preference) {
   html {
     interpolate-size: allow-keywords;
   }
 }
+
 body {
   /* 4. Add accessible line-height */
-  line-height: 1.75; /* 5. Improve text rendering */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
-} /* 6. Improve media defaults */
+}
+
+/* 6. Improve media defaults */
+
 img,
 picture,
 video,
@@ -24,13 +38,19 @@ canvas,
 svg {
   display: block;
   max-width: 100%;
-} /* 7. Inherit fonts for form controls */
+}
+
+/* 7. Inherit fonts for form controls */
+
 input,
 button,
 textarea,
 select {
   font: inherit;
-} /* 8. Avoid text overflows */
+}
+
+/* 8. Avoid text overflows */
+
 p,
 h1,
 h2,
@@ -39,10 +59,14 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
-} /* 9. Improve line wrapping */
+}
+
+/* 9. Improve line wrapping */
+
 p {
   text-wrap: pretty;
 }
+
 h1,
 h2,
 h3,
@@ -50,11 +74,17 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
-} /* 10. Create a root stacking context */
+}
+
+/* 10. Create a root stacking context */
+
 #root,
 #__next {
   isolation: isolate;
-} /* ========== */
+}
+
+/* ========== */
+
 :root {
   --bg: #ffffff;
   --text: #111111;
@@ -72,45 +102,52 @@ h6 {
   --details-bg-color-open: rgba(0, 0, 0, 0.1);
   --text-underline-color: rgba(0, 0, 0, 0);
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #111111;
-    --text: #f1f1f1;
-    --link: #32cd32;
-    --link-visited: orange;
-    --link-hover: orange;
+    --bg: #000c0c;
+    --text: #a2a2a2;
+    --link: #009933;
+    --link-visited: #f77c00;
+    --link-hover: #ff9933;
     --border-color: #2e2e2e;
-    --scroll-btn-color: white;
+    --scroll-btn-color: #a2a2a2;
     --scroll-btn-bg-color: rgba(255, 255, 255, 0.15);
     --scroll-btn-border-color: rgba(255, 255, 255, 0.3);
     --scroll-btn-box-shadow: rgba(0, 0, 0, 0.15);
     --scroll-btn-bg-color-hover: rgba(255, 255, 255, 0.25);
     --heading-bg-color: rgba(255, 255, 255, 0.075);
-    --details-bg-color-close: rgba(0, 0, 0, 0.05);
+    --details-bg-color-close: rgba(0, 0, 0, 0);
     --details-bg-color-open: rgba(255, 255, 255, 0.1);
     --text-underline-color: #ffff00;
   }
 }
+
 body {
   background-color: var(--bg);
   color: var(--text);
 }
+
 a:link {
   color: var(--link);
 }
+
 a:visited {
   color: var(--link-visited);
 }
+
 a:hover {
   color: var(--link-hover);
 }
+
 html {
-  font-family: "Space Mono";
+  font-family: "IBM Plex Mono";
   font-size: clamp(14px, 1.5vw, 18px);
   display: flex;
   justify-content: center;
   scroll-behavior: smooth;
 }
+
 body {
   display: flex;
   flex-direction: column;
@@ -123,47 +160,67 @@ body {
     background-color 0.3s,
     color 0.3s;
 }
+
 h1 {
   font-size: 1.5rem;
 }
+
 h2 {
   font-size: 1.25rem;
   text-decoration: underline;
 }
+
 h3 {
   font-size: 1rem;
 }
+
 h4 {
   font-size: 1rem;
 }
+
 ul {
   margin: 0;
   padding: 0;
 }
+
 li {
   list-style-type: none;
 }
+
 section {
   margin: 24px 0;
 }
+
 article {
-  margin: 20px 0; /* border: 1px solid var(--border-color); */ /* padding: 10px; */ /* border-radius: 2px; */
+  margin: 20px 0;
+  /* border: 2px solid var(--border-color); */
+  /* padding: 10px; */
+  /* border-radius: 2px; */
 }
+
 article header {
   margin-bottom: 10px;
-  border: 1px solid var(--border-color);
+  border: 2px solid var(--border-color);
   border-radius: 4px;
   padding: 4px 10px;
   background-color: var(--heading-bg-color);
 }
+
 time {
   text-align: right;
-} /* hr { */ /* 	border: 0; */ /* 	border-bottom: 1px solid var(--border-color); */ /* } */
+}
+
+/* hr { */
+/* 	border: 0; */
+/* 	border-bottom: 1px solid var(--border-color); */
+/* } */
+
 hr {
   border: none;
   border-top: 1px solid var(--border-color);
   margin: 2rem 0;
 }
+
 section:target {
   scroll-margin-top: 40px;
 }
@@ -172,17 +229,21 @@ section:target {
   display: flex;
   flex-direction: column;
 }
+
 .row {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
 }
+
 .col-1 {
   flex: 2;
 }
+
 .col-2 {
   flex: 2;
 }
+
 .navigation-list {
   display: flex;
   flex-direction: row;
@@ -191,6 +252,7 @@ section:target {
   align-items: center;
   gap: 10px;
 }
+
 .technology-list {
   display: flex;
   gap: 4px 0;
@@ -199,45 +261,59 @@ section:target {
   align-items: center;
   flex-wrap: wrap;
 }
+
 .technology-list li + li::before {
   content: "|";
   padding: 0 8px;
   opacity: 0.5;
 }
+
 .content-list {
   margin-left: 1rem;
 }
+
 .content-list li {
   list-style-type: circle;
 }
+
 .organization-list {
   margin-left: 0;
 }
+
 .organization-list li {
   list-style-type: none;
 }
+
 .experience-header-list li {
   list-style-type: none;
 }
+
 ul.work-info-list {
   margin-left: 1rem;
 }
+
 .work-info-list li {
   list-style-type: disc;
 }
+
 #header {
-  padding-bottom: 10px; /* border-bottom: 1px solid var(--border-color); */
+  padding-bottom: 10px;
+  /* border-bottom: 1px solid var(--border-color); */
 }
+
 #footer {
   padding: 10px 0;
   border-top: 1px solid var(--border-color);
 }
+
 #footer > p {
   text-align: center;
 }
+
 .align-right {
   text-align: right;
 }
+
 .footer-container {
   display: flex;
   gap: 10px;
@@ -246,11 +322,13 @@ ul.work-info-list {
   align-content: center;
   justify-content: center;
 }
+
 #profile-picture {
   height: 200px;
   border-radius: 100%;
-  border: 1px solid var(--border-color);
+  border: 2px solid var(--border-color);
 }
+
 .hello {
   display: flex;
   align-content: center;
@@ -258,12 +336,14 @@ ul.work-info-list {
   align-items: center;
   flex-direction: column;
 }
+
 .designation {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
 .scroll-btns {
   position: fixed;
   bottom: 70px;
@@ -272,6 +352,7 @@ ul.work-info-list {
   flex-direction: column;
   gap: 8px;
 }
+
 .scroll-btns a {
   display: flex;
   align-items: center;
@@ -285,7 +366,7 @@ ul.work-info-list {
   background-color: var(--scroll-btn-bg-color);
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(6px) saturate(180%);
-  border: 1px solid var(--scroll-btn-border-color);
+  border: 2px solid var(--scroll-btn-border-color);
   box-shadow: 0 4px 16px var(--scroll-btn-box-shadow);
   -webkit-tap-highlight-color: transparent;
   outline: none;
@@ -295,17 +376,21 @@ ul.work-info-list {
     background-color 0.2s,
     transform 0.2s;
 }
+
 .scroll-btns a:hover {
   background-color: var(--scroll-btn-bg-color-hover);
 }
+
 #print-btn-parent {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 #print-btn:hover {
   color: var(--link-hover);
 }
+
 #print-btn {
   color: var(--link);
   background: none;
@@ -314,29 +399,33 @@ ul.work-info-list {
   padding: 0;
   cursor: pointer;
 }
+
 /* hover for desktop only */
+
 @media (hover: hover) {
   .scroll-btns a:hover {
     transform: scale(1.1);
   }
 }
+
 details {
   cursor: pointer;
   margin: 10px 0px;
   background: var(--details-bg-color-close);
-  border: 1px solid var(--border-color);
+  border: 2px solid var(--details-bg-color-open);
   border-radius: 4px;
-  padding: 0px 8px;
+  padding: 8px;
   -webkit-tap-highlight-color: transparent;
   outline: none;
   user-select: none;
   -webkit-user-select: none;
 }
+
 details:open {
   background: var(--details-bg-color-open);
-  border: 1px solid var(--border-color);
+  border: 2px solid var(--border-color);
   border-radius: 4px;
-  padding: 0px 8px;
+  padding: 8px;
 }
 
 details summary {
@@ -348,15 +437,18 @@ details summary {
     margin: 1.5cm 2cm;
     size: A4;
   }
+
   #print-btn,
   #copyright-text,
   .scroll-btns,
   #education-and-experience ~ hr,
   #projects,
   #projects ~ hr,
-  #blogs {
+  #blogs,
+  #my-setup {
     display: none;
   }
+
   a:visited {
     color: var(--link);
   }

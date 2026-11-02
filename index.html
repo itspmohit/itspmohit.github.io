@@ -79,7 +79,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" href="static/favicon/favicon.ico" sizes="any" />
@@ -158,8 +158,36 @@
         </ul>
       </nav>
       <div class="scroll-btns" aria-label="Page navigation">
-        <a href="#header" title="Go to top" aria-label="Go to top">↑</a>
-        <a href="#footer" title="Go to bottom" aria-label="Go to bottom">↓</a>
+        <a href="#header" title="Go to top" aria-label="Go to top">
+          <svg
+            viewBox="64 64 896 896"
+            focusable="false"
+            data-icon="arrow-up"
+            width="1em"
+            height="1em"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M868 545.5L536.1 163a31.96 31.96 0 00-48.3 0L156 545.5a7.97 7.97 0 006 13.2h81c4.6 0 9-2 12.1-5.5L474 300.9V864c0 4.4 3.6 8 8 8h60c4.4 0 8-3.6 8-8V300.9l218.9 252.3c3 3.5 7.4 5.5 12.1 5.5h81c6.8 0 10.5-8 6-13.2z"
+            ></path>
+          </svg>
+        </a>
+        <a href="#footer" title="Go to bottom" aria-label="Go to bottom">
+          <svg
+            viewBox="64 64 896 896"
+            focusable="false"
+            data-icon="arrow-down"
+            width="1em"
+            height="1em"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M862 465.3h-81c-4.6 0-9 2-12.1 5.5L550 723.1V160c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v563.1L255.1 470.8c-3-3.5-7.4-5.5-12.1-5.5h-81c-6.8 0-10.5 8.1-6 13.2L487.9 861a31.96 31.96 0 0048.3 0L868 478.5c4.5-5.2.8-13.2-6-13.2z"
+            ></path>
+          </svg>
+        </a>
       </div>
       <section class="hello" aria-label="Profile introduction">
         <img
@@ -218,6 +246,32 @@
             motorcycle in the twisties.
           </li>
         </ul>
+        <section id="my-setup" aria-labelledby="my-setup-heading">
+          <h3 id="my-setup-heading">
+            <a
+              href="https://github.com/itspmohit/dotfiles"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              My Setup ↗
+            </a>
+          </h3>
+
+          <p>The tools I use to build, ship, and debug software.</p>
+
+          <ul role="list" class="content-list">
+            <li>
+              <strong>Hardware:</strong> 16-inch MacBook Pro (M1 Pro, 16 GB RAM,
+              512 GB SSD)
+            </li>
+            <li>
+              <strong>Operating System:</strong> Fedora Asahi Remix; Sway
+              (Wayland compositor)
+            </li>
+            <li><strong>Terminal &amp; Shell:</strong> Alacritty; Zsh; Tmux</li>
+            <li><strong>Editor:</strong> Neovim with LazyVim</li>
+          </ul>
+        </section>
       </section>
       <hr />
       <section id="education-and-experience" aria-labelledby="edu-heading">
